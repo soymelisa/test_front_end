@@ -1,6 +1,6 @@
 // Jaden Smith, el hijo de Will Smith es la estrella de algunas películas como
 // The Karate Kid y After Earth, tambien es conocido por su filosofía que
-// comparte a travez de Twitter, cuando escribe en Twitter también es conocido
+// comparte a través de Twitter, cuando escribe en Twitter también es conocido
 // por capitalizar cada palabra.
 
 // Crea una función llamada toJadenSmithPhilosophy que convierta strings como
@@ -12,10 +12,21 @@
 
 
 // Tests
-const toJadenSmithString = 'How can mirrors be real if our eyes aren\'t real'
+var str = 'How can mirrors be real if our eyes aren\'t real'
+// const toJadenSmithString = 'How can mirrors be real if our eyes aren\'t real'
 const wordIsCapitalized = word => /^[A-Z]/.test(word);
+
+var toJadenSmithPhilosophy = function (str) {
+	str = str.toLowerCase().split(' ');
+	for (var i = 0; i < str.length; i++) {
+		str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+	}
+	return str.join(' ');
+};
+const toJadenSmithString = toJadenSmithPhilosophy(str);
+
 console.log('TESTS', new Date().toISOString())
-console.log('---'.repeat(20))
+console.log('toJadenSmithPhilosophy'.repeat(20))
 console.log(
     typeof toJadenSmithPhilosophy !== 'undefined',
     'La función toJadenSmithPhilosophy existe.');

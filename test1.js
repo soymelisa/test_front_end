@@ -4,8 +4,16 @@
 
 
 // Tests
+let a = (254).toString(2);
+let b= (1).toString(2);
+
+function sumToBinary (a, b) {
+    sum = a + b
+    return sum.toString(2);
+}
+
 console.log('TESTS', new Date().toISOString())
-console.log('---'.repeat(20));
+console.log('sumToBinary'.repeat(20));
 console.log(
     typeof sumToBinary !== 'undefined',
     'La función sumToBynary existe.')
